@@ -27,7 +27,9 @@
 					<i class="bi bi-bug-fill me-2"></i>Error Details
 				</h6>
 				<pre class="bg-light rounded p-3 small text-danger"
-					style="max-height: 300px; overflow: auto;"><%=DataUtility.exceptionToString(new Exception())%></pre>
+style="max-height: 300px; overflow: auto;">
+<%=DataUtility.exceptionToString((Exception) exception)%>
+</pre>
 			</div>
 			<%
 			}

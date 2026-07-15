@@ -53,6 +53,15 @@ public interface ORSView {
 	public String WATER_MONITORING_LIST_VIEW = PAGE_FOLDER + "/WaterMonitoringListView.jsp";
 	public String DRONE_DELIVERY_VIEW = PAGE_FOLDER + "/DroneDeliveryView.jsp";
 	public String DRONE_DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DroneDeliveryListView.jsp";
+	public String SMART_LIGHT_VIEW = PAGE_FOLDER + "/SmartLightView.jsp";
+	public String SMART_LIGHT_LIST_VIEW = PAGE_FOLDER + "/SmartLightListView.jsp";
+	public String ENERGY_CONSUMPTION_VIEW = PAGE_FOLDER + "/EnergyConsumptionView.jsp";
+	public String ENERGY_CONSUMPTION_LIST_VIEW = PAGE_FOLDER + "/EnergyConsumptionListView.jsp";
+	public String VOICE_COMMAND_VIEW = PAGE_FOLDER + "/VoiceCommandView.jsp";
+	public String VOICE_COMMAND_LIST_VIEW = PAGE_FOLDER + "/VoiceCommandListView.jsp";
+	public String AI_RECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
+	public String AI_RECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
+
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
 
@@ -79,6 +88,7 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
+	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/uploadphoto";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
@@ -105,6 +115,14 @@ public interface ORSView {
 	public String WATER_MONITORING_LIST_CTL = APP_CONTEXT + "/ctl/WaterMonitoringListCtl";
 	public String DRONE_DELIVERY_CTL = APP_CONTEXT + "/ctl/DroneDeliveryCtl";
 	public String DRONE_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DroneDeliveryListCtl";
+	public String SMART_LIGHT_CTL = APP_CONTEXT + "/ctl/SmartLightCtl";
+	public String SMART_LIGHT_LIST_CTL = APP_CONTEXT + "/ctl/SmartLightListCtl";
+	public String ENERGY_CONSUMPTION_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionCtl";
+	public String ENERGY_CONSUMPTION_LIST_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionListCtl";
+	public String VOICE_COMMAND_CTL = APP_CONTEXT + "/ctl/VoiceCommandCtl";
+	public String VOICE_COMMAND_LIST_CTL = APP_CONTEXT + "/ctl/VoiceCommandListCtl";
+	public String AI_RECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
+	public String AI_RECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";

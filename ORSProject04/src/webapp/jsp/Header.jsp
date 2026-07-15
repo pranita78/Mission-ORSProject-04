@@ -182,7 +182,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.FACULTY_LIST_CTL%>"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> Faculty List
+								class="bi bi-person-lines-fill me-2 text-primary"></i> Faculty
+								List
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
@@ -241,12 +242,15 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-patch-check me-1"></i> Subscription
 							</h6>
 						</li>
-						<li><a class="dropdown-item" href="<%=ORSView.SUBSCRIPTION_CTL%>">
-								<i class="bi bi-plus-circle me-2 text-success"></i> Add Subscription
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SUBSCRIPTION_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add
+								Subscription
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.SUBSCRIPTION_LIST_CTL%>"> <i
-								class="bi bi-card-checklist me-2 text-primary"></i> Subscription List
+								class="bi bi-card-checklist me-2 text-primary"></i> Subscription
+								List
 						</a></li>
 
 					</ul></li>
@@ -269,15 +273,18 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.COLLEGE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> College List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> College
+								List
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.COURSE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Course List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Course
+								List
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.SUBJECT_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Subject List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Subject
+								List
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
@@ -290,11 +297,13 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.STUDENT_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Student List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Student
+								List
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.FACULTY_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Faculty List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Faculty
+								List
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"> <i
@@ -315,7 +324,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.MARKSHEET_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Marksheet List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Marksheet
+								List
 						</a></li>
 
 					</ul></li>
@@ -332,75 +342,89 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-<!-- Bug Tracker -->
-<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-bug me-1"></i> Bug Tracker
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.BUG_TRACKER_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Bug
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.BUG_TRACKER_LIST_CTL%>">
-    <i class="bi bi-bug-fill me-2 text-danger"></i> Bug Tracker List
-</a></li>
+						<!-- Bug Tracker -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-bug me-1"></i> Bug Tracker
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.BUG_TRACKER_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add Bug
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.BUG_TRACKER_LIST_CTL%>"> <i
+								class="bi bi-bug-fill me-2 text-danger"></i> Bug Tracker List
+						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-						 
+
 						<!-- WaterMonitoring -->
-<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-droplet me-1"></i> Water Monitoring
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.WATER_MONITORING_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Water Monitoring
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.WATER_MONITORING_LIST_CTL%>">
-    <i class="bi bi-droplet-fill me-2 text-primary"></i> Water Monitoring List
-</a></li>
-
-						<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-send me-1"></i> Drone Delivery
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.DRONE_DELIVERY_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Drone Delivery
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.DRONE_DELIVERY_LIST_CTL%>">
-    <i class="bi bi-send-fill me-2 text-primary"></i> Drone Delivery List
-</a></li>
-
-						<!-- Hospital System -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-hospital me-1"></i> Hospital System
+								<i class="bi bi-droplet me-1"></i> Water Monitoring
 							</h6>
 						</li>
-						<li><a class="dropdown-item" href="#">
-								<i class="bi bi-plus-circle me-2 text-success"></i> Add Hospital
+						<li><a class="dropdown-item"
+							href="<%=ORSView.WATER_MONITORING_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add Water
+								Monitoring
 						</a></li>
-						<li><a class="dropdown-item" href="#">
-								<i class="bi bi-list-ul me-2 text-primary"></i> Hospital List
+						<li><a class="dropdown-item"
+							href="<%=ORSView.WATER_MONITORING_LIST_CTL%>"> <i
+								class="bi bi-droplet-fill me-2 text-primary"></i> Water
+								Monitoring List
 						</a></li>
 
-						<li><hr class="dropdown-divider border-secondary"></li>
-
-						<!-- Insurance App -->
 						<li>
 							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-shield me-1"></i> Insurance App
+								<i class="bi bi-send me-1"></i> Drone Delivery
 							</h6>
 						</li>
-						<li><a class="dropdown-item" href="#">
-								<i class="bi bi-plus-circle me-2 text-success"></i> Add Insurance
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DRONE_DELIVERY_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add Drone
+								Delivery
 						</a></li>
-						<li><a class="dropdown-item" href="#">
-								<i class="bi bi-list-ul me-2 text-primary"></i> Insurance List
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DRONE_DELIVERY_LIST_CTL%>"> <i
+								class="bi bi-send-fill me-2 text-primary"></i> Drone Delivery
+								List
 						</a></li>
 
+
+						<!-- Voice Command -->
+						<li>
+							<h6 class="dropdown-header">Voice Command</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.VOICE_COMMAND_CTL%>"> <i
+								class="bi bi-plus-circle me-1"></i> Add Voice Command
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.VOICE_COMMAND_LIST_CTL%>"> <i
+								class="bi bi-list-ul me-1"></i> List Voice Command
+						</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<!-- AI Recommendation -->
+						<li>
+						<li>
+						<li>
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-cpu me-1"></i> AI Recommendation
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AI_RECOMMENDATION_CTL%>"> <i
+								class="bi bi-plus-circle me-2 text-success"></i> Add AI
+								Recommendation
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>"> <i
+								class="bi bi-list-ul me-2 text-primary"></i> AI Recommendation
+								List
+						</a></li>
 					</ul></li>
 				<%
 				}
@@ -446,11 +470,12 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				%>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle d-flex align-items-center gap-1 px-2"
-					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <span
-						class="rounded-circle bg-white text-primary d-flex align-items-center justify-content-center fw-bold"
-						style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;">
-							<%=userBean.getFirstName().substring(0, 1).toUpperCase()%>
-					</span> <span class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
+					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <img
+						src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=userBean.getId()%>"
+						alt="User Photo" class="rounded-circle border" width="28"
+						height="28" style="object-fit: cover; flex-shrink: 0;"> <span
+						class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
+						
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow border-0 rounded-3"

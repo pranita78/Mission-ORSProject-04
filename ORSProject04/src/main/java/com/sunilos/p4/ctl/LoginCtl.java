@@ -44,8 +44,6 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 
 		log.debug("LoginCtl Method validate Started");
 
-		MessageSource ms = getMessageSource(request);
-
 		boolean pass = true;
 
 		String login = request.getParameter("login");
@@ -53,18 +51,16 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 		if (DataValidator.isNull(login)) {
 			// request.setAttribute("login", PropertyReader.getValue("error.require", "Login
 			// Id"));
-			// request.setAttribute("login", PropertyReader.getValue("error.require", "Login
-			// Id"));
-			request.setAttribute("login", ms.get("valid.required"));
+			request.setAttribute("login", PropertyReader.getValue("error.require", "LoginId"));
+//			request.setAttribute("login", ms.get("valid.required"));
 			pass = false;
 		} else if (!DataValidator.isEmail(login)) {
 			request.setAttribute("login", PropertyReader.getValue("error.email", "Login "));
 			pass = false;
 		}
 		if (DataValidator.isNull(request.getParameter("password"))) {
-			// request.setAttribute("password", PropertyReader.getValue("error.require",
-			// "Password"));
-			request.setAttribute("password", ms.get("valid.required"));
+			request.setAttribute("password", PropertyReader.getValue("error.require", "Password"));
+//			request.setAttribute("password", ms.get("valid.required"));
 			pass = false;
 		}
 
@@ -100,8 +96,10 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 		HttpSession session = request.getSession(false);
 
 		if (request.getParameter("operation") != null) {
-			session.invalidate();
-			ServletUtility.setSuccessMessage("user logout successfully", request);
+			if (session != null) {
+				session.invalidate();
+				ServletUtility.setSuccessMessage("user logout successfully", request);
+			}
 		}
 
 		super.doGet(request, response);
@@ -152,7 +150,7 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 	protected String getView() {
 		System.out.println("------------------------------>");
 		System.out.println(MessageSource.getInstance().get("login.userid"));
-		return getView(null);
+		return ORSView.LOGIN_VIEW;
 	}
 
 	@Override

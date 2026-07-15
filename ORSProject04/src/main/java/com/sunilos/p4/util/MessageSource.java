@@ -56,8 +56,8 @@ public final class MessageSource {
 
 	public static void main(String[] args) {
 		MessageSource ms = MessageSource.getInstance();
-		ms.setLocale("hi");
-		String val = ms.get("login.userid1");
+	//	ms.setLocale("en");
+		String val = ms.get("login.userid");
 		System.out.println("-->" + val);
 	}
 }
