@@ -72,7 +72,7 @@ public class HTMLUtility {
 
 		boolean select = true;
 		if (select) {
-			sb.append("<option selected value=''>--------------Select Role---------------</option>");
+			sb.append("<option selected value=''>--------------Select---------------</option>");
 		}
 
 		for (DropdownListBean obj : dd) {
@@ -86,6 +86,9 @@ public class HTMLUtility {
 			}
 		}
 		sb.append("</select>");
+
+		System.out.println(sb.toString());
+
 		return sb.toString();
 	}
 

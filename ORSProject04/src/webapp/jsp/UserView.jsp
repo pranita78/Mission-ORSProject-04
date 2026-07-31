@@ -11,7 +11,7 @@
 	scope="request"></jsp:useBean>
 
 <%
-List l = (List) request.getAttribute("roleList");
+List roleList = (List) request.getAttribute("roleList");
 String _suc = ServletUtility.getSuccessMessage(request);
 String _err = ServletUtility.getErrorMessage(request);
 HashMap genderMap = new HashMap();
@@ -60,13 +60,16 @@ genderMap.put("F", "Female");
 				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
 					enctype="multipart/form-data"
 					class="d-flex align-items-center gap-2">
+
 					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 						type="file" name="photo" class="form-control form-control-sm"
 						accept="image/*">
+
 					<button type="submit"
 						class="btn btn-sm btn-outline-primary text-nowrap">
 						<i class="bi bi-upload me-1"></i> Upload Photo
 					</button>
+
 				</form>
 			</div>
 			<%
@@ -133,7 +136,7 @@ genderMap.put("F", "Female");
 					</div>
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Role</label>
-						<%=HTMLUtility.getList("roleId", String.valueOf(bean.getRoleId()), l)%>
+						<%=HTMLUtility.getList("roleId", String.valueOf(bean.getRoleId()), roleList)%>
 					</div>
 				</div>
 

@@ -6,6 +6,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
+
+import com.sunilos.p4.bean.UserBean;
+import com.sunilos.p4.exception.ApplicationException;
+import com.sunilos.p4.model.RoleModel;
+import com.sunilos.p4.model.UserModel;
+import com.sunilos.p4.util.DataUtility;
+import com.sunilos.p4.util.DataValidator;
+import com.sunilos.p4.util.PropertyReader;
+import com.sunilos.p4.util.ServletUtility;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -16,22 +26,25 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
 
-import org.apache.log4j.Logger;
-
-import com.sunilos.p4.bean.UserBean;
-import com.sunilos.p4.exception.ApplicationException;
-import com.sunilos.p4.model.UserModel;
-import com.sunilos.p4.util.DataUtility;
-import com.sunilos.p4.util.DataValidator;
-import com.sunilos.p4.util.PropertyReader;
-
 @WebServlet("/ctl/uploadphoto")
 @MultipartConfig
 public class UploadPhotoCtl extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private static Logger log = Logger.getLogger(UploadPhotoCtl.class);
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		RoleModel model = new RoleModel();
+		try {
+			List l = model.list();
+			request.setAttribute("roleList", l);
+		} catch (ApplicationException e) {
+		}
+
+		super.service(request, response);
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -111,22 +124,30 @@ public class UploadPhotoCtl extends HttpServlet {
 			throws ServletException, IOException {
 
 		long id = DataUtility.getLong(request.getParameter("id"));
+		UserModel model = new UserModel();
+		UserBean bean = model.findByPK(id);
+		ServletUtility.setBean(bean, request);
 		String view = request.getParameter("view");
 
 		Part part = request.getPart("photo");
 
 		if (part == null || part.getSize() == 0) {
-			response.getWriter().println("Please select a photo.");
+			ServletUtility.setErrorMessage("Photo is required", request);
+			ServletUtility.forwardPage(getView(), request, response);
 			return;
 		}
 
+		System.out.println("part ==== : " + part.getName());
+
 		// Original file name
-		String fileName = part.getSubmittedFileName();
+		String fileName = part.getSubmittedFileName(); // get original file name
 
 		// Folder path from system.properties
 		String basePath = PropertyReader.getValue("photoPath");
 
 		File folder = new File(basePath);
+
+		System.out.println("base path of image folder: " + folder.getName());
 
 		if (!folder.exists()) {
 			folder.mkdirs();
@@ -148,15 +169,12 @@ public class UploadPhotoCtl extends HttpServlet {
 		input.close();
 		output.close();
 
-		UserModel model = new UserModel();
-
 		try {
 
 			// Update photo name in database
 			model.updatePhoto(id, fileName);
 
-			// Refresh session user
-			UserBean bean = model.findByPK(id);
+			System.out.println("image successfully uploaded");
 
 			HttpSession session = request.getSession(false);
 
@@ -179,4 +197,9 @@ public class UploadPhotoCtl extends HttpServlet {
 			response.sendRedirect("UserCtl?id=" + id);
 		}
 	}
+
+	public String getView() {
+		return ORSView.USER_VIEW;
+	}
+
 }

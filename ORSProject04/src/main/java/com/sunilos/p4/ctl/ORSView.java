@@ -61,6 +61,14 @@ public interface ORSView {
 	public String VOICE_COMMAND_LIST_VIEW = PAGE_FOLDER + "/VoiceCommandListView.jsp";
 	public String AI_RECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
 	public String AI_RECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
+	public String WEATHER_ALERT_VIEW = PAGE_FOLDER + "/WeatherAlertView.jsp";
+	public String WEATHER_ALERT_LIST_VIEW = PAGE_FOLDER + "/WeatherAlertListView.jsp";
+	public String QR_SCANNER_VIEW = PAGE_FOLDER + "/QRScannerView.jsp";
+	public String QR_SCANNER_LIST_VIEW = PAGE_FOLDER + "/QRScannerListView.jsp";
+	public String EXAM_VIEW = PAGE_FOLDER + "/ExamView.jsp";
+	public String EXAM_LIST_VIEW = PAGE_FOLDER + "/ExamListView.jsp";
+	public String BRANCH_VIEW = PAGE_FOLDER + "/BranchView.jsp";
+	public String BRANCH_LIST_VIEW = PAGE_FOLDER + "/BranchListView.jsp";
 
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
@@ -123,7 +131,16 @@ public interface ORSView {
 	public String VOICE_COMMAND_LIST_CTL = APP_CONTEXT + "/ctl/VoiceCommandListCtl";
 	public String AI_RECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
 	public String AI_RECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
+	public String WEATHER_ALERT_CTL = APP_CONTEXT + "/ctl/WeatherAlertCtl";
+	public String WEATHER_ALERT_LIST_CTL = APP_CONTEXT + "/ctl/WeatherAlertListCtl";
+	public String QR_SCANNER_CTL = APP_CONTEXT + "/ctl/QRScannerCtl";
+	public String QR_SCANNER_LIST_CTL = APP_CONTEXT + "/ctl/QRScannerListCtl";
+	public String EXAM_CTL = APP_CONTEXT + "/ctl/ExamCtl";
+	public String EXAM_LIST_CTL = APP_CONTEXT + "/ctl/ExamListCtl";
+	public String BRANCH_CTL = APP_CONTEXT + "/ctl/BranchCtl";
+	public String BRANCH_LIST_CTL = APP_CONTEXT + "/ctl/BranchListCtl";
 
+	
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
 	public String COLLEGE_REPORT_VIEW = "/reports/CollegeListReport.jrxml";

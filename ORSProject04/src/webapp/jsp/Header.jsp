@@ -341,6 +341,42 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						style="min-width: 210px; background: #1a2e4a;">
 
 						<li><hr class="dropdown-divider border-secondary"></li>
+						<li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-cloud-lightning me-1"></i> Weather Alert
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.WEATHER_ALERT_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Weather Alert
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.WEATHER_ALERT_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Weather Alert List
+</a></li>
+ <!-- Exam -->
+<li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-file-earmark-text me-1"></i> Exam
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.EXAM_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Exam
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.EXAM_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Exam List
+</a></li>
+
+             <!-- QR Scanner -->
+<li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-qr-code-scan me-1"></i> QR Scanner
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.QR_SCANNER_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add QR Scanner
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.QR_SCANNER_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> QR Scanner List
+</a></li>
 
 						<!-- Bug Tracker -->
 						<li>
@@ -358,7 +394,21 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
-
+       
+                     <!-- Branch -->
+                     <li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-building me-1"></i> Branch
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.BRANCH_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Branch
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.BRANCH_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Branch List
+</a></li>
+  
+  
 
 						<!-- WaterMonitoring -->
 						<li>
