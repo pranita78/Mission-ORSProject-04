@@ -121,12 +121,12 @@ public abstract class BaseModel<T extends BaseBean> {
 				bean.setResultset(rs);
 			}
 			rs.close();
-		} catch (Exception e) {
-			log.error("Database Exception..", e);
-			throw new ApplicationException("Exception : Exception in getting User by emailId");
-		} finally {
-			JDBCDataSource.closeConnection(conn);
-		}
+		}  catch (Exception e) {
+    e.printStackTrace();
+    throw new RuntimeException(e);
+} finally {
+    JDBCDataSource.closeConnection(conn);
+}
 		log.debug("Model findBy EmailId End");
 		return bean;
 	}
