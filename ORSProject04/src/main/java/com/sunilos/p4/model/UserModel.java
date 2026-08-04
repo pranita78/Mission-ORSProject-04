@@ -475,7 +475,7 @@ public class UserModel extends BaseModel<UserBean> {
 
 	@Override
 	public String getTable() {
-		return "ST_USER";
+		return "st_user";
 	}
 
 	@Override
