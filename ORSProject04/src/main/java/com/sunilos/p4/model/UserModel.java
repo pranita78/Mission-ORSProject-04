@@ -475,13 +475,8 @@ public class UserModel extends BaseModel<UserBean> {
 
 	@Override
 	public String getTable() {
-<<<<<<< HEAD
 	    return "st_user";
-=======
-		return "st_user";
->>>>>>> 7ce01b13eb8769e90d5ae9619baad83a1e2c0272
 	}
-
 
 
 	@Override
