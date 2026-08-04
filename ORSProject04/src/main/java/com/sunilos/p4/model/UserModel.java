@@ -57,7 +57,7 @@ public class UserModel extends BaseModel<UserBean> {
 			System.out.println(pk + " in ModelJDBC");
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn
-					.prepareStatement("INSERT INTO ST_USER VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO st_user VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setInt(1, pk);
 			pstmt.setString(2, bean.getFirstName());
 			pstmt.setString(3, bean.getLastName());
@@ -124,7 +124,7 @@ public class UserModel extends BaseModel<UserBean> {
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false); // Begin transaction
-			PreparedStatement pstmt = conn.prepareStatement("UPDATE ST_USER SET PHOTO=? WHERE ID=?");
+			PreparedStatement pstmt = conn.prepareStatement("UPDATE st_user SET PHOTO=? WHERE ID=?");
 			pstmt.setString(1, photo);
 			pstmt.setLong(2, id);
 			pstmt.executeUpdate();
@@ -166,7 +166,7 @@ public class UserModel extends BaseModel<UserBean> {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement(
-					"UPDATE ST_USER SET FIRST_NAME=?,LAST_NAME=?,LOGIN=?,PASSWORD=?,DOB=?,MOBILE_NO=?,ROLE_ID=?,UNSUCCESSFUL_LOGIN=?,GENDER=?,LAST_LOGIN=?,USER_LOCK=?,REGISTERED_IP=?,LAST_LOGIN_IP=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
+					"UPDATE st_user SET FIRST_NAME=?,LAST_NAME=?,LOGIN=?,PASSWORD=?,DOB=?,MOBILE_NO=?,ROLE_ID=?,UNSUCCESSFUL_LOGIN=?,GENDER=?,LAST_LOGIN=?,USER_LOCK=?,REGISTERED_IP=?,LAST_LOGIN_IP=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
 			pstmt.setString(1, bean.getFirstName());
 			pstmt.setString(2, bean.getLastName());
 			pstmt.setString(3, bean.getLogin());
@@ -259,7 +259,7 @@ public class UserModel extends BaseModel<UserBean> {
 
 	public List getRoles(UserBean bean) throws ApplicationException {
 		log.debug("Model get roles Started");
-		StringBuffer sql = new StringBuffer("SELECT * FROM ST_USER WHERE role_Id=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM st_user WHERE role_Id=?");
 		Connection conn = null;
 		List list = new ArrayList();
 		try {
@@ -475,8 +475,10 @@ public class UserModel extends BaseModel<UserBean> {
 
 	@Override
 	public String getTable() {
-		return "ST_USER";
+	    return "st_user";
 	}
+
+
 
 	@Override
 	public UserBean getBean() {
