@@ -122,8 +122,9 @@ public abstract class BaseModel<T extends BaseBean> {
 			}
 			rs.close();
 		} catch (Exception e) {
-			log.error("Database Exception..", e);
-			throw new ApplicationException("Exception : Exception in getting User by emailId");
+    e.printStackTrace();
+    throw new RuntimeException(e);
+}
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
