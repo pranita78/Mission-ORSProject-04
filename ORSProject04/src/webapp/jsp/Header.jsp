@@ -365,6 +365,18 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
     <i class="bi bi-list-ul me-2 text-primary"></i> Exam List
 </a></li>
 
+ <!-- Fee -->
+    <li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-cash-coin me-1"></i> Fee
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.FEE_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Fee
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.FEE_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Fee List
+</a></li>
              <!-- QR Scanner -->
 <li>
     <h6 class="dropdown-header text-uppercase text-info small">

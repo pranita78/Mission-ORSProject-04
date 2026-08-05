@@ -479,6 +479,7 @@ public class UserModel extends BaseModel<UserBean> {
 	}
 
 
+
 	@Override
 	public UserBean getBean() {
 		return new UserBean();
