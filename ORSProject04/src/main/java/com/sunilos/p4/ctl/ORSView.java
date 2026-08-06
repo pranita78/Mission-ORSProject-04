@@ -71,6 +71,8 @@ public interface ORSView {
 	public String BRANCH_LIST_VIEW = PAGE_FOLDER + "/BranchListView.jsp";
 	public String FEE_VIEW = PAGE_FOLDER + "/FeeView.jsp";
 	public String FEE_LIST_VIEW = PAGE_FOLDER + "/FeeListView.jsp";
+	public String ORDER_VIEW = PAGE_FOLDER + "/OrderView.jsp";
+	public String ORDER_LIST_VIEW = PAGE_FOLDER + "/OrderListView.jsp";
 
 
 
@@ -144,6 +146,8 @@ public interface ORSView {
 	public String BRANCH_LIST_CTL = APP_CONTEXT + "/ctl/BranchListCtl";
 	public String FEE_CTL = APP_CONTEXT + "/ctl/FeeCtl";
 	public String FEE_LIST_CTL = APP_CONTEXT + "/ctl/FeeListCtl";
+	public String ORDER_CTL = APP_CONTEXT + "/ctl/OrderCtl";
+	public String ORDER_LIST_CTL = APP_CONTEXT + "/ctl/OrderListCtl";
 
 	
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";

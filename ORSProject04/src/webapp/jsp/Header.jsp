@@ -365,6 +365,19 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
     <i class="bi bi-list-ul me-2 text-primary"></i> Exam List
 </a></li>
 
+<!-- Order -->
+<li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-bag-check me-1"></i> Order
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.ORDER_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Order
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.ORDER_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Order List
+</a></li>
+
  <!-- Fee -->
     <li>
     <h6 class="dropdown-header text-uppercase text-info small">
