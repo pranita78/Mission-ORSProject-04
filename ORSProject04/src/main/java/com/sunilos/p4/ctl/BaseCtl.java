@@ -1,6 +1,7 @@
 package com.sunilos.p4.ctl;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -28,12 +29,8 @@ import com.sunilos.p4.util.ServletUtility;
  * @Copyright (c) Rays EdTech
  */
 
-public abstract class BaseCtl<B extends BaseBean, M extends BaseModel<B>> extends HttpServlet {
+public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends HttpServlet {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	public static final String OP_SAVE = "Save";
 	public static final String OP_CANCEL = "Cancel";
 	public static final String OP_DELETE = "Delete";
@@ -159,7 +156,17 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel<B>> extend
 
 		try {
 			super.service(request, response);
-		} catch (DuplicateRecordException e) {
+		} catch (ApplicationException e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage() + " ============== database is down ===================");
+			ServletUtility.setPageNo(1, request);
+			ServletUtility.setPageSize(10, request);
+			ServletUtility.setList(new ArrayList<BaseBean>(), request);
+			request.setAttribute("nextList", new ArrayList<BaseBean>());
+			ServletUtility.setErrorMessage("database service is down", request);
+			ServletUtility.forwardPage(getView(), request, response);
+		}catch (DuplicateRecordException e) {
+			// Handle if any duplicate record exception
 			ServletUtility.setBean(bean, request);
 			ServletUtility.setErrorMessage(e.getMessage(), request);
 			ServletUtility.forwardPage(getView(), request, response);
@@ -196,6 +203,9 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel<B>> extend
 			throws ServletException, IOException {
 
 		log.debug("CollegeCtl Method doGet Started");
+
+		String op = DataUtility.getString(request.getParameter("operation"));
+
 		// get model
 
 		long id = DataUtility.getLong(request.getParameter("id"));
@@ -224,7 +234,7 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel<B>> extend
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			B bean = populateBean(request);
+			BaseBean bean = populateBean(request);
 			this.getModel().delete(bean);
 			ServletUtility.redirect(getView(OP_DELETE), request, response);
 		} catch (ApplicationException e) {

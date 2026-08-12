@@ -390,6 +390,21 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 <li><a class="dropdown-item" href="<%=ORSView.FEE_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Fee List
 </a></li>
+
+  	<!-- COMPLAINT -->
+  
+  <li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-megaphone me-1"></i> Complaint
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.COMPLAINT_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Complaint
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.COMPLAINT_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Complaint List
+</a></li>
+
              <!-- QR Scanner -->
 <li>
     <h6 class="dropdown-header text-uppercase text-info small">
@@ -432,8 +447,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 <li><a class="dropdown-item" href="<%=ORSView.BRANCH_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Branch List
 </a></li>
-  
-  
+    
+   
 
 						<!-- WaterMonitoring -->
 						<li>

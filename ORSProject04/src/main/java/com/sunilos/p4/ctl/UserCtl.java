@@ -137,7 +137,7 @@ public class UserCtl extends BaseCtl<UserBean, UserModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.USER_VIEW;
 	}
 
 	@Override
