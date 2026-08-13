@@ -75,6 +75,8 @@ public interface ORSView {
 	public String ORDER_LIST_VIEW = PAGE_FOLDER + "/OrderListView.jsp";
 	public String COMPLAINT_VIEW = PAGE_FOLDER + "/ComplaintView.jsp";
 	public String COMPLAINT_LIST_VIEW = PAGE_FOLDER + "/ComplaintListView.jsp";
+	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
+	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
 
 
 
@@ -152,6 +154,8 @@ public interface ORSView {
 	public String ORDER_LIST_CTL = APP_CONTEXT + "/ctl/OrderListCtl";
 	public String COMPLAINT_CTL = APP_CONTEXT + "/ctl/ComplaintCtl";
 	public String COMPLAINT_LIST_CTL = APP_CONTEXT + "/ctl/ComplaintListCtl";
+	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
+	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
 
 	
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";

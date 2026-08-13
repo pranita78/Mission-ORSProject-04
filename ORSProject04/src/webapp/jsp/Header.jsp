@@ -352,6 +352,19 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 <li><a class="dropdown-item" href="<%=ORSView.WEATHER_ALERT_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Weather Alert List
 </a></li>
+
+         <!-- Employee-->
+<li>
+    <h6 class="dropdown-header text-uppercase text-info small">
+        <i class="bi bi-person-badge me-1"></i> Employee
+    </h6>
+</li>
+<li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>">
+    <i class="bi bi-plus-circle me-2 text-success"></i> Add Employee
+</a></li>
+<li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>">
+    <i class="bi bi-list-ul me-2 text-primary"></i> Employee List
+</a></li>
  <!-- Exam -->
 <li>
     <h6 class="dropdown-header text-uppercase text-info small">
