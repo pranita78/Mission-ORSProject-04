@@ -160,7 +160,7 @@ public class RoleModel extends BaseModel<RoleBean> {
 
 	@Override
 	public String getTable() {
-		return "ST_ROLE";
+		return "st_role";
 	}
 
 	@Override
