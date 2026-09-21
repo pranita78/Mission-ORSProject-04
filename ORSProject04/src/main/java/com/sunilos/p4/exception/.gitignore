@@ -1,0 +1,4 @@
+/ApplicationException.class
+/DatabaseException.class
+/DuplicateRecordException.class
+/RecordNotFoundException.class

@@ -105,30 +105,40 @@ public abstract class BaseModel<T extends BaseBean> {
 
 	public T findByUniqueColumn(String column, String value) throws ApplicationException {
 
-		log.debug("Model findBy EmailId Started");
+	    log.debug("Model findBy EmailId Started");
 
-		StringBuffer sql = new StringBuffer("SELECT * FROM " + getTable() + " WHERE " + column + "='" + value + "'");
+	    StringBuffer sql = new StringBuffer(
+	            "SELECT * FROM " + getTable() + " WHERE " + column + "='" + value + "'");
 
-		T bean = null;
+	    T bean = null;
 
-		Connection conn = null;
-		try {
-			conn = JDBCDataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				bean = getBean();
-				bean.setResultset(rs);
-			}
-			rs.close();
-		}  catch (Exception e) {
-    e.printStackTrace();
-    throw new RuntimeException(e);
-} finally {
-    JDBCDataSource.closeConnection(conn);
-}
-		log.debug("Model findBy EmailId End");
-		return bean;
+	    Connection conn = null;
+
+	    try {
+	        conn = JDBCDataSource.getConnection();
+
+	        PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+
+	        ResultSet rs = pstmt.executeQuery();
+
+	        while (rs.next()) {
+	            bean = getBean();
+	            bean.setResultset(rs);
+	        }
+
+	        rs.close();
+
+	    } catch (Exception e) {
+	        log.error("Database Exception..", e);
+	        throw new ApplicationException("Database Server Down");
+
+	    } finally {
+	        JDBCDataSource.closeConnection(conn);
+	    }
+
+	    log.debug("Model findBy EmailId End");
+
+	    return bean;
 	}
 
 	/**

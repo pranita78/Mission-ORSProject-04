@@ -36,6 +36,7 @@ genderMap.put("F", "Female");
 			if (_suc != null && !_suc.isEmpty()) {
 			%>
 			<div class="alert alert-success py-2">
+				
 				<i class="bi bi-check-circle-fill me-2"></i><%=_suc%></div>
 			<%
 			}
@@ -44,6 +45,7 @@ genderMap.put("F", "Female");
 			if (_err != null && !_err.isEmpty()) {
 			%>
 			<div class="alert alert-danger py-2">
+			
 				<i class="bi bi-exclamation-triangle-fill me-2"></i><%=_err%></div>
 			<%
 			}
