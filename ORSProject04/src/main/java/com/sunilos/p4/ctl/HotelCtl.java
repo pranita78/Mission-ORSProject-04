@@ -14,6 +14,7 @@ public class HotelCtl extends BaseCtl<HotelBean, HotelModel> {
 
 	private static final long serialVersionUID = 1L;
 
+	
 	@Override
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;

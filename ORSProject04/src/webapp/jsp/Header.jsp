@@ -404,18 +404,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 <li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Employee List
 </a></li>
- <!-- Exam -->
-<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-file-earmark-text me-1"></i> Exam
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.EXAM_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Exam
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.EXAM_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> Exam List
-</a></li>
+   
 
 
  <!-- Fee -->

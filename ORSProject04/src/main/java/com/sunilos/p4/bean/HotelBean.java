@@ -15,6 +15,7 @@ public class HotelBean extends BaseBean {
 	private String rating;
 	private String contactNo;
 
+	
 	public String getHotelName() {
 		return hotelName;
 	}
