@@ -83,7 +83,6 @@ public interface ORSView {
 	public String DOCTOR_LIST_VIEW = PAGE_FOLDER + "/DoctorListView.jsp";
 
 
-
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
 
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
