@@ -364,20 +364,6 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 <li><a class="dropdown-item" href="<%=ORSView.ORDER_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Order List
 </a></li>
- 
- 
-  <!-- doctor-->
-  <li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-heart-pulse me-1"></i> Doctor
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.DOCTOR_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Doctor
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.DOCTOR_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> Doctor List
-</a></li>
 
  <!-- HOTEL-->
 <li>
@@ -390,61 +376,6 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 </a></li>
 <li><a class="dropdown-item" href="<%=ORSView.HOTEL_LIST_CTL%>">
     <i class="bi bi-list-ul me-2 text-primary"></i> Hotel List
-</a></li>
-
-         <!-- Employee-->
-<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-person-badge me-1"></i> Employee
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Employee
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.EMPLOYEE_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> Employee List
-</a></li>
-   
-
-
- <!-- Fee -->
-    <li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-cash-coin me-1"></i> Fee
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.FEE_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Fee
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.FEE_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> Fee List
-</a></li>
-
-  	<!-- COMPLAINT -->
-  
-  <li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-megaphone me-1"></i> Complaint
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.COMPLAINT_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add Complaint
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.COMPLAINT_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> Complaint List
-</a></li>
-
-             <!-- QR Scanner -->
-<li>
-    <h6 class="dropdown-header text-uppercase text-info small">
-        <i class="bi bi-qr-code-scan me-1"></i> QR Scanner
-    </h6>
-</li>
-<li><a class="dropdown-item" href="<%=ORSView.QR_SCANNER_CTL%>">
-    <i class="bi bi-plus-circle me-2 text-success"></i> Add QR Scanner
-</a></li>
-<li><a class="dropdown-item" href="<%=ORSView.QR_SCANNER_LIST_CTL%>">
-    <i class="bi bi-list-ul me-2 text-primary"></i> QR Scanner List
 </a></li>
 
 						<!-- Bug Tracker -->
