@@ -94,9 +94,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 					data-bs-toggle="dropdown"> <i class="bi bi-mortarboard me-1"></i>
 						Academics
 				</a>
-					<ul
-						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
-						style="min-width: 210px; background: #1a2e4a;">
+					
+<ul
+    class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
+    style="min-width: 210px; max-height: 70vh; overflow-y: auto; overflow-x: hidden; background: #1a2e4a;">
+
 
 						<!-- Colleges -->
 						<li>

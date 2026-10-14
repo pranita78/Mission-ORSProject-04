@@ -95,10 +95,12 @@ String _err = ServletUtility.getErrorMessage(request);
 							<td><%=bean.getLocation()%></td>
 							<td><%=bean.getRating()%></td>
 							<td><%=bean.getContactNo()%></td>
-							<td><a href="HotelCtl?id=<%=bean.getId()%>"
-								class="btn btn-sm btn-outline-primary"> <i
-									class="bi bi-pencil"></i> Edit
-							</a></td>
+							<td>
+<a href="<%=ORSView.HOTEL_CTL%>?id=<%=bean.getId()%>"
+   class="btn btn-sm btn-outline-primary">
+    <i class="bi bi-pencil"></i> Edit
+</a>
+</td>
 						</tr>
 						<%
 						}
