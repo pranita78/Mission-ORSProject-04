@@ -9,6 +9,7 @@ import com.sunilos.p4.exception.DuplicateRecordException;
 import com.sunilos.p4.util.JDBCDataSource;
 
 public class HotelModel extends BaseModel<HotelBean> {
+	
 
 	@Override
 	public HotelBean getBean() {
