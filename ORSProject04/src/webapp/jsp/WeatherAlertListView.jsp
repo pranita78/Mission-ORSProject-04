@@ -13,7 +13,6 @@ List list = ServletUtility.getList(request);
 Iterator<WeatherAlertBean> it = list.iterator();
 String _err = ServletUtility.getErrorMessage(request);
 %>
-
 <div class="container-fluid px-4 py-4" style="max-width: 900px;">
 	<div class="card border-0 shadow-sm rounded-4 overflow-hidden">
 
