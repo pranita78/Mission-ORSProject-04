@@ -116,7 +116,6 @@ public class WeatherAlertModel extends BaseModel<WeatherAlertBean> {
 		}
 		return sql.toString();
 	}
-
 	public WeatherAlertBean findByAlertCode(String alertCode) {
 		return findByUniqueColumn("ALERT_CODE", alertCode);
 	}

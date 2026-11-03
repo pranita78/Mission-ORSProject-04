@@ -22,7 +22,6 @@ public class WeatherAlertListCtl extends BaseListCtl<WeatherAlertBean, WeatherAl
 		populateDTO(bean, request);
 		return bean;
 	}
-
 	@Override
 	protected String getView() {
 		return ORSView.WEATHER_ALERT_VIEW;
