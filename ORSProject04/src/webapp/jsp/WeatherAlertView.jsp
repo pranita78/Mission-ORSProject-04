@@ -107,6 +107,7 @@ statusList.put("OFF", "OFF");
 					<button type="submit" name="operation" value="<%=BaseCtl.OP_SAVE%>"
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
+						
 					</button>
 				</div>
 			</form>

@@ -20,7 +20,7 @@ public class WeatherAlertCtl extends BaseCtl<WeatherAlertBean, WeatherAlertModel
 		//LinkedHashMap<String, String> statusList = new LinkedHashMap<String, String>();
 		//statusList.put("ON", "ON");
 		//statusList.put("OFF", "OFF");
-		//request.setAttribute("statusList", statusList);
+		//request.setAttribute("statusList", statusListt);
 	//}
 
 	@Override
