@@ -105,6 +105,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					</tbody>
 				</table>
 			</div>
+
 			<div class="p-3 border-top">
 				<%@ include file="ListFooter.jsp"%>
 			</div>
