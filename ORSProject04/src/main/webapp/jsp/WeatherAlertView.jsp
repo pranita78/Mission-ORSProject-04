@@ -99,7 +99,7 @@ statusList.put("OFF", "OFF");
 						<%
 						}
 
-						%>
+				%>
 					</select>
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("status", request)%></div>
 				</div>
