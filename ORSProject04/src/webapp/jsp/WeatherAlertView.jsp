@@ -103,11 +103,10 @@ statusList.put("OFF", "OFF");
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("status", request)%></div>
 				</div>
 
-				<div class="d-flex gap-2 pt-2 border-top">
+			<div class="d-flex gap-2 pt-2 border-top">
 					<button type="submit" name="operation" value="<%=BaseCtl.OP_SAVE%>"
 						class="btn btn-primary">
 						<i class="bi bi-save me-1"></i> Save
-						
 					</button>
 				</div>
 			</form>

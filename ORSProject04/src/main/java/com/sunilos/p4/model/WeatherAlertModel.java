@@ -121,7 +121,8 @@ public class WeatherAlertModel extends BaseModel<WeatherAlertBean> {
 	}
 
 	@Override
-	public String getTable() {
+ 	public String getTable() {
 		return "st_weather_alert";
 	}
 }
+

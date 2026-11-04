@@ -56,7 +56,6 @@ public class WeatherAlertBean extends BaseBean {
 	public String getValue() {
 		return alertCode;
 	}
-
 	@Override
 	public void setResultset(ResultSet rs) {
 		try {
@@ -70,3 +69,4 @@ public class WeatherAlertBean extends BaseBean {
 		}
 	}
 }
+
